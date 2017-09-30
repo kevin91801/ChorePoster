@@ -17,10 +17,12 @@
     "passport-local": "^1.0.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13"
   },
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "proxy": "http://localhost:3000"

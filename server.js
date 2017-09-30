@@ -8,6 +8,7 @@ const mongo = require("mongodb");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const routes = require("./routes");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,7 +26,7 @@ app.use(function (req, res, next) {
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/ChorePoster"
+	process.env.MONGODB_URI || "mongodb://localhost/ChorePoster",
 	{
 		useMongoClient: true
 	}
